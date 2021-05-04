@@ -7,10 +7,10 @@
         <link rel="stylesheet" href="CSS/headermenu.css">
         <link rel="stylesheet" href="CSS/bodycontent.css">
         <link rel="stylesheet" href="CSS/signup.css">
+        <link rel="stylesheet" href="CSS/signuppopup.css">
 
-        <script src="JavaScript/chaning-content-header.js"></script>
-
-        <script src="jquery-3.5.1.min.js"></script>
+        <script src="JavaScript/changing-content-header.js"></script>
+        <script src="JavaScript/signup-popup-active.js"></script>
 </head>
 
 <body>
@@ -38,12 +38,17 @@
           <div class="content">
             <h2 class="changing-content-header" id="changing-content-header">Crowdsourced curation for everything</h2>
             <p class="content-subheader">We're bulding right now... Coming Spring 2022</p>
-            <div class=sign-up>
-                <input id="email-signup-input" type="text" placeholder="Enter Email Address">
+            <div class="first-email-signup">
+                <input class="first-signup-input" type="text" placeholder="Enter Email Address">
                 <button class="join-wl-button" id="join-wl-button">Join the Waitlist</button>
             </div>
-            <input id="password-signup-iput" type="text" placeholder="Enter Password">
-            <button id=sing-up-button>Sign Up</button>
+            <div class=sign-up-popup>
+                <h1 class="close-button" id="close-button">X</h1>
+                <h1 class="popup-title-text">Discovr</h1>
+                <input id="email-signup-input" type="text" placeholder="Enter Email Address">
+                <input id="password-signup-input" type="text" placeholder="Enter Password">
+                <button id=sign-up-button>Sign Up</button>
+            </div>
           </div>
         </main>
       </div>

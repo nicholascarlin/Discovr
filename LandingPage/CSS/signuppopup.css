@@ -1,0 +1,70 @@
+.sign-up-popup {
+    position: absolute;
+    opacity: 0%;
+    z-index: -1;
+    background-color: #03a2ff;
+    height: 300px;
+    margin-bottom: 70px;
+    width: 350px;
+    border-radius: 4px;
+    top: 250px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.sign-up-popup.sup-active {
+    opacity: 100%;
+    transition: .3s ease-in;
+    z-index: 1;
+}
+
+#email-signup-input {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 40%;
+    height: 50px;
+    border-radius: 4px;
+    border-style: none;
+    text-indent: 4px;
+}
+
+#password-signup-input {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 60%;
+    height: 50px;
+    border-radius: 4px;
+    border-style: none;
+    text-indent: 4px;
+}
+
+#sign-up-button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#sign-up-button {
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    height: 50px;
+    border-style: none;
+}
+
+.popup-title-text {
+    position: absolute;
+    left: 30%;
+    top: 30px;
+    color: white;
+    font-size: 50px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+}
