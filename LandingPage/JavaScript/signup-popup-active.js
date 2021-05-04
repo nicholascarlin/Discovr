@@ -8,10 +8,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             signupPopup[i].classList.add("sup-active");
         }
 
-        let bg = document.getElementById('bg');
+        let pg = document.getElementById('pg');
 
-        bg.style.visibility = "visible";
-        bg.style.opacity = .6;
+        pg.style.visibility = "visible";
+        pg.style.opacity = .6;
 
     })
 
@@ -23,11 +23,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             signupPopup[i].classList.remove("sup-active");
         }
 
-        let bg = document.getElementById('bg');
+        let pg = document.getElementById('pg');
 
-        bg.style.visibility = "hidden";
-        bg.style.opacity = 0;
+        pg.style.visibility = "hidden";
+        pg.style.opacity = 0;
 
     })
-
 });

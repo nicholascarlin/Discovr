@@ -70,6 +70,18 @@ main small {
   background: #000;
 }
 
+.pg {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+  background: #000;
+}
+
 #nav-container:focus-within .bg {
   visibility: visible;
   opacity: .6;
@@ -111,12 +123,15 @@ main small {
 #nav-container:focus-within .hamburger-menu-button {
   pointer-events: none;
 }
+
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
   transform: translate3d(0,8px,0) rotate(45deg);
 }
+
 #nav-container:focus-within .icon-bar:nth-of-type(2) {
   opacity: 0;
 }
+
 #nav-container:focus-within .icon-bar:nth-of-type(3) {
   transform: translate3d(0,-8px,0) rotate(-45deg);
 }
