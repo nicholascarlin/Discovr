@@ -11,6 +11,7 @@
 
         <script src="JavaScript/changing-content-header.js"></script>
         <script src="JavaScript/signup-popup-active.js"></script>
+        <script src="JavaScript/side-menu-bg-visibility.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,8 @@
     <div class="page">
         <header tabindex="0" class="header-text">Discovr</header>
         <div id="nav-container">
-          <div class="bg"></div>
-          <div class="hamburger-menu-button" tabindex="0">
+          <div class="bg" id="bg"></div>
+          <div class="hamburger-menu-button" id="hamburger-menu-button" tabindex="0">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -36,7 +37,7 @@
       
         <main>
           <div class="content">
-            <h2 class="changing-content-header" id="changing-content-header">Crowdsourced curation for everything</h2>
+            <h2 class="changing-content-header" id="changing-content-header"></h2>
             <p class="content-subheader">We're bulding right now... Coming Spring 2022</p>
             <div class="first-email-signup">
                 <input class="first-signup-input" type="text" placeholder="Enter Email Address">
