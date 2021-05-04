@@ -46,10 +46,6 @@ main > div {
   max-width: 600px;
 }
 
-main h2 span {
-  color: #BF7497;
-}
-
 main p {
   line-height: 1.5;
   font-weight: 200;

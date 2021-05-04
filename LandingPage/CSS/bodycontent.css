@@ -1,0 +1,11 @@
+.changing-content-header {
+    font-size: 50px;
+    margin: 0;
+    position: relative;
+    padding-top: 100px;
+}
+
+main > div {
+    margin: 0 auto;
+    max-width: 600px;
+  }
