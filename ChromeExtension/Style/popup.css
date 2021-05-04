@@ -1,0 +1,14 @@
+:root {
+    --main-background: #3d3d6b;
+}
+
+html, body {
+    width: 300px;
+    height: 500px;
+}
+
+body {
+    background: var(--main-background);
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0px;
+}

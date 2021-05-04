@@ -1,0 +1,39 @@
+:root {
+  --header-background: #3d3d6b;
+  --half-circle-background-color: #fefefe;
+}
+
+.header {
+  width: 100%;
+}
+
+.header-text {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding-top: 25px;
+  font-size: 4em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header-square {
+  position: absolute;
+  z-index: -2;
+  height: 150px;
+  width: 100%;
+  background: var(--header-background);
+  margin-top: -50px;
+}
+
+.header-circle {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: var(--half-circle-background-color);
+  height: 200px;
+  width: 251px;
+  top: 15px;
+  margin-left: -.5px;
+  border-radius: 50%;
+}

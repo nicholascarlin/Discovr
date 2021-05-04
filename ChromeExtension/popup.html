@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+      <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="Style/popup.css">
+      <link rel="stylesheet" href="Style/header.css">
+      <link rel="stylesheet" href="Style/footertabs.css">
+      <link rel="stylesheet" href="Style/hometab.css">
+      <link rel="stylesheet" href="Style/linkaccordion.css">
+      <script src="Scripts/popup.js"></script>
+      <script src="Scripts/footertabs.js"></script>
+      <script src="Scripts/hometab.js"></script>
+      <script src="Scripts/linkaccordion.js"></script>
+      <title>Discovr</title>
+  </head>
+
+  <body>
+  
+    <div class="header">
+      <div class="header-square"></div>
+      <div class="header-circle"></div>
+      <h1 class='header-text'>Discovr</h1>
+    </div>
+
+    <div class="wrapper">
+      <div id="container" class="container">
+        <nav>
+          <a href="#html" class="link link1 active"> 
+            <i class="fa fa-home"></i></a>
+          <a href="#css" class="link link2">
+            <i class="fa fa-globe"></i>
+          </a>
+          <a href="#js" class="link link3">
+            <i class="fa fa-link"></i>
+          </a>
+        </nav>
+        <div class="content">
+
+          <!-- Beginning of Home Tab -->
+
+          <div class="item item1" id="html">
+            <h2>Home</h2>
+            <i class="fa fa-html5"></i>
+
+            <!-- Select Group Box -->
+
+            <div class="select-box">
+              <select class="selectpicker"  multiple="" data-live-search="true" data-live-search-placeholder="Search" tabindex="-98">
+                        <optgroup label="Private Groups">
+                          <option>BEC</option>
+                          <option>VMA</option>         
+                        </optgroup>
+                        <optgroup label="Public Groups">
+                          <option>Stan</option>
+                          <option>Fanny</option>
+                          <option>Rudy</option>
+                          <option>Ahmed</option>
+                        </optgroup>                     
+                      </select>
+            </div>
+
+            <!-- Add URL Input Box -->
+
+            <div class="al-input-div">
+              <input class="al-input" type="text" placeholder="Add URL Here">
+              <span class="al-input-focus-border"></span>
+            </div>
+
+            <!-- Submit Button -->
+
+            <div class="button-wrapper">
+              <button id="submit-button" class="">
+                <span>Submit</span>
+                <div class="success">
+                  
+                  <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  viewBox="0 0 29.756 29.756" style="enable-background:new 0 0 29.756 29.756;" xml:space="preserve">                 
+                    <path d="M29.049,5.009L28.19,4.151c-0.943-0.945-2.488-0.945-3.434,0L10.172,18.737l-5.175-5.173   c-0.943-0.944-2.489-0.944-3.432,0.001l-0.858,0.857c-0.943,0.944-0.943,2.489,0,3.433l7.744,7.752   c0.944,0.943,2.489,0.943,3.433,0L29.049,8.442C29.991,7.498,29.991,5.953,29.049,5.009z"/>
+                  </svg>
+
+                  </div>
+              </button>
+            </div>                  
+          </div>
+
+          <!-- End of Home Tab -->
+
+          <!-- Beginning of Social Tab -->
+
+          <div class="item item2" id="css">
+            <h2>Social</h2>
+            <i class="fa fa-css3"></i>
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+
+          <!-- End of Social Tab -->
+
+          <!-- Beginning of Link Tab -->
+
+          <div class="item item3" id="js">
+            <h2>links</h2>
+            <i class="fa fa-html5"></i>
+
+            <!-- Link Accordian -->
+
+            <div class="tabs">
+              <div class="link-tab">
+                <label class="tab-label">Item 1</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                </div>
+              </div>
+              <div class="link-tab">
+                <label class="tab-label">Item 2</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                </div>
+              </div>
+            </div>
+
+            <!-- End of Link Box -->
+
+          </div>
+
+          <!-- End of Link Tab -->
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
