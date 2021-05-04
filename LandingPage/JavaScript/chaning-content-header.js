@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let textIndex = Math.floor(Math.random() * headerArray.length);
 
+    text.innerHTML = headerArray[textIndex];
+
     setInterval(function(){ 
         text.innerHTML = headerArray[textIndex];
 
