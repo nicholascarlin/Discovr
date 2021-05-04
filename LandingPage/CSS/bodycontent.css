@@ -2,9 +2,15 @@
     font-size: 50px;
     margin: 0;
     padding-top: 70px;
+    width: 100%;
+    text-align: center;
 }
 
 main > div {
     margin: 0 auto;
     max-width: 600px;
+  }
+
+  .content-subheader {
+      font-size: 30px;
   }
