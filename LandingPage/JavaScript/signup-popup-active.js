@@ -1,6 +1,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     
     document.getElementById('join-wl-button').addEventListener("click", function() {
+
+        if(document.getElementById('first-signup-input').validity.valid) {
         
         let signupPopup = document.getElementsByClassName("sign-up-popup");
 
@@ -15,15 +17,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         pg.style.visibility = "visible";
         pg.style.opacity = .6;
 
-        document.getElementById("password-signup-input").value = "";
-
         console.log(document.getElementById('first-signup-input').value);
 
-        if(document.getElementById('first-signup-input').value == "") {
-            document.getElementById('email-signup-input').focus()
-        } else {
-            document.getElementById("password-signup-input").focus();
-        }
+        document.getElementById("first-name-signup-input").focus();
+
+    } else {
+        console.log("REEFED");
+    }
     })
 
     document.getElementById('close-button').addEventListener("click", function() {

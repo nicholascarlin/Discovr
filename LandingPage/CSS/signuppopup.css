@@ -3,7 +3,7 @@
     opacity: 0%;
     z-index: -1;
     background-color: #03a2ff;
-    height: 300px;
+    height: 400px;
     margin-bottom: 70px;
     width: 350px;
     border-radius: 4px;
@@ -23,18 +23,29 @@
     position: absolute;
     width: 80%;
     left: 10%;
-    top: 40%;
+    top: 70%;
     height: 50px;
     border-radius: 4px;
     border-style: none;
     text-indent: 4px;
 }
 
-#password-signup-input {
+#first-name-signup-input {
     position: absolute;
     width: 80%;
     left: 10%;
-    top: 60%;
+    top: 30%;
+    height: 50px;
+    border-radius: 4px;
+    border-style: none;
+    text-indent: 4px;
+}
+
+#last-name-signup-input {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 50%;
     height: 50px;
     border-radius: 4px;
     border-style: none;
@@ -53,6 +64,8 @@
     height: 50px;
     border-style: none;
     border-radius: 0px 0px 4px 4px;
+    left: 0;
+    right: 0;
 }
 
 .popup-title-text {
