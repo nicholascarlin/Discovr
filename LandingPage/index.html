@@ -10,13 +10,11 @@
         <link rel="stylesheet" href="CSS/signuppopup.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
+
+        <script src="JavaScript/email-validation.js"></script>
         <script src="JavaScript/changing-content-header.js"></script>
         <script src="JavaScript/signup-popup-active.js"></script>
-        <script src="JavaScript/side-menu-bg-visibility.js"></script>
-        <script src="JavaScript/email-validation.js"></script>
-
-        
+        <script src="JavaScript/side-menu-bg-visibility.js"></script>        
 </head>
 
 <body>
@@ -46,10 +44,8 @@
             <h2 class="changing-content-header" id="changing-content-header"></h2>
             <p class="content-subheader">We're bulding right now... Coming Spring 2022</p>
             <div class="first-email-signup">
-              <form>
-                <input id="first-signup-input" class="first-signup-input" type="email" placeholder="Enter Email Address">
-                <input type="submit" value="Join the Waitlist" button class="join-wl-button" id="join-wl-button">
-              </form>
+              <input id="first-signup-input" class="first-signup-input" type="text" placeholder="Enter Email Address">
+              <button class="join-wl-button" id="join-wl-button">Join the Waitlist</button>
             </div>
             <div class=sign-up-popup>
                 <h1 class="close-button" id="close-button">X</h1>
@@ -57,9 +53,9 @@
 
                 <input id="first-name-signup-input" type="text" placeholder="Enter First Name">
                 <input id="last-name-signup-input" type="text" placeholder="Enter Last Name">
+                <input id="email-signup-input" type="text" placeholder="Enter Email Address">
 
-                <input id="email-signup-input" class="email-signup-input" type="email" placeholder="Enter Email Address">
-                <input type="submit" value="Sign Up" button class="sign-up-button" id="sign-up-button">
+                <button id=sign-up-button>Sign Up</button>
             </div>
           </div>
         </main>

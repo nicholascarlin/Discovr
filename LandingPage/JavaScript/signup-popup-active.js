@@ -1,9 +1,28 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+
+    function runEmail() {
+        const email = $("#first-signup-input").val();
+
+        if (validateEmail(email)) {
+            //CONTINUE
+            console.log("VALID");
+            return true;
+        } else {
+            alert("Please enter a valid email");
+            console.log("INVALID");
+        }
+        return false;
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
     
     document.getElementById('join-wl-button').addEventListener("click", function() {
-
-        if(document.getElementById('first-signup-input').validity.valid) {
         
+        if(runEmail()) {
+
         let signupPopup = document.getElementsByClassName("sign-up-popup");
 
         for(var i = 0; i < signupPopup.length; i++) {
@@ -17,12 +36,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         pg.style.visibility = "visible";
         pg.style.opacity = .6;
 
+        document.getElementById("first-name-signup-input").value = "";
+        document.getElementById("last-name-signup-input").value = "";
+
         console.log(document.getElementById('first-signup-input').value);
 
         document.getElementById("first-name-signup-input").focus();
-
-    } else {
-        console.log("REEFED");
     }
     })
 
