@@ -9,9 +9,9 @@
 main > div {
     margin: 0 auto;
     max-width: 600px;
-  }
+}
 
-  .content-subheader {
-      font-size: 30px;
-      text-align: center;
-  }
+.content-subheader {
+    font-size: 30px;
+    text-align: center;
+}
