@@ -42,7 +42,7 @@ app.use((req, res, next) => {
 })
 console.log(__dirname)
 
-app.use("/", express.static(__dirname+"/public/Pages/"));
+app.use("/", express.static(__dirname+"/Pages"));
 
 function insertToWaitlist(email, request){
   MongoClient.connect(url, function (err, db) {
@@ -68,7 +68,7 @@ function insertToMain(userId, request){
     var dbo = db.db("DISCOVRWAITLIST");
     dbo.collection("MaintainWaitlist").updateOne(
       {"id": "WAITLIST"}, 
-      {$push: {"waitlist":request.body.email}}, function(err, result){
+      {$push: {"waitlist":request.body.email.toLowerCase()}}, function(err, result){
         db.close()
       } 
     )
@@ -83,8 +83,8 @@ function checkIfIsExisting(email, request){
     var dbo = db.db("DISCOVRWAITLIST");
     dbo.collection("MaintainWaitlist").findOne({"id":"WAITLIST"}, function(err,result){
       console.log(result)
-      console.log("Index of email is: "+result.waitlist.indexOf(email))
-      if(result.waitlist.indexOf(request.body.email) === -1){
+      console.log("Index of email is: "+result.waitlist.indexOf(email.toLowerCase()))
+      if(result.waitlist.indexOf(request.body.email.toLowerCase()) === -1){
         request.session.emailExists = true;
         console.log("has email: "+request.session.emailExists)
         console.log()
@@ -92,7 +92,7 @@ function checkIfIsExisting(email, request){
         insertToWaitlist(email,request)
         insertToMain("hello", request)
       } else {
-        request.session.waitlistSize = result.waitlist.indexOf(email)
+        request.session.waitlistSize = result.waitlist.indexOf(email.toLowerCase())
         request.session.emailExists = false;
         console.log("has email: "+request.session.emailExists)
       }
@@ -140,7 +140,7 @@ app.post("/addToWaitlist", function(request, response){
 })
   
 
-var server = app.listen(process.env.PORT || 80, function () {
+var server = app.listen(process.env.PORT || 3000, function () {
   var port = server.address().port;
   console.log("App now running on port", port);
 });
