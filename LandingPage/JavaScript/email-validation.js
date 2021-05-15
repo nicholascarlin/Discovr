@@ -21,7 +21,7 @@ function submitSignup(email){
         "email":email,
     }
     $.ajax({
-        url: 'http://localhost:3000/addToWaitlist',
+        url: '/addToWaitlist',
         type: 'POST',
         async: false,
         data:data,

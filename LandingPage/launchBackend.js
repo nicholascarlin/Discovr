@@ -11,6 +11,7 @@ var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
 var url = "mongodb+srv://igranet:CSE330s@cluster0.gcbju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+'use strict'
 
 app.use(session({
   secret: 'secret',
@@ -39,9 +40,10 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Expose-Headers', ['Content-Type']);
   next();
 })
+console.log(__dirname)
 
+app.use("/", express.static(__dirname+"/public/Pages/"));
 
-app.use("/", express.static(__dirname+"/Pages"));
 function insertToWaitlist(email, request){
   MongoClient.connect(url, function (err, db) {
 
@@ -138,7 +140,7 @@ app.post("/addToWaitlist", function(request, response){
 })
   
 
-var server = app.listen(process.env.PORT || 3000, function () {
+var server = app.listen(process.env.PORT || 80, function () {
   var port = server.address().port;
   console.log("App now running on port", port);
 });
