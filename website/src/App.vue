@@ -4,6 +4,7 @@
     <SideMenu v-on:tabChanged="onTabChange" />
       <div class="pages">
         <HomePage v-if="tabIndex==1"/>
+        <Login v-if="tabIndex==6"/>
       </div>
   </div>
 </template>
@@ -12,6 +13,7 @@
 import SideMenu from './components/SideMenu.vue'
 import Header from './components/Header.vue'
 import HomePage from './components/HomePage.vue'
+import Login from './components/Login.vue'
 
 export default {
   data() {
@@ -23,7 +25,8 @@ export default {
   components: {
     SideMenu,
     Header,
-    HomePage
+    HomePage,
+    Login
   },
   methods: {
     onTabChange(value) {
@@ -45,10 +48,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-.app {
-  background-color: rgb(228, 228, 228);
 }
 
 .pages {

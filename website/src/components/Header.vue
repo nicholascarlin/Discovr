@@ -61,6 +61,7 @@ export default {
     justify-content: space-between;
     padding: 10px;
     border-bottom: inset 2px;
+    background-color: rgb(228, 228, 228);
 }
 
 .header * {
