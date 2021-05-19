@@ -34,7 +34,7 @@ export default {
     width: 250px;
     height: 100%;
     background-color: rgb(228, 228, 228);
-    border-right: 1px solid;
+    border-right: 2px inset;
 }
 
 .menu-option {

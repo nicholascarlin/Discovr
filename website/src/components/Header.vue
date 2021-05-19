@@ -26,6 +26,7 @@ export default {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 .header-log-in:hover {
@@ -58,7 +59,7 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: solid 1px;
+    border-bottom: inset 2px;
 }
 
 .header * {
