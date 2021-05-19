@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header-logo-text">Discovr</div>
         <input class="header-search-bar" type="text" placeholder="Search for anything">
-        <div class="header-subtext">SHIT HERE</div>
+        <div class="header-al">Add a Link</div>
     </div>
 </template>
 
@@ -14,10 +14,19 @@ export default {
 
 <style scoped>
 
+.header-al {
+    text-align: center;
+    width: 100px;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
 .header-logo-text {
-    float: left;
+    text-align: left;
     font-size: 40px;
-    margin-left: 10px;
 }
 
 .header-search-bar {
@@ -32,12 +41,14 @@ export default {
     outline: none;
 }
 
-.header-subtext {
-    float: right;
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.header {
-    padding: 10px;
+.header * {
+    align-self: center;
 }
 
 
