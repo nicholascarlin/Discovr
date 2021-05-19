@@ -34,6 +34,7 @@ export default {
     width: 250px;
     height: 100%;
     background-color: rgb(228, 228, 228);
+    border-right: 1px solid;
 }
 
 .menu-option {
@@ -44,13 +45,24 @@ export default {
     text-align: left;
     text-indent: 35px;
     cursor: pointer;
-    border-bottom: solid 1px;
 }
 
 .menu-option.active {
-    transition: 1s;
+    transition: .25s;
     background: var(--disc-blue);
     background: linear-gradient(90deg, var(--disc-blue) 0%, rgba(228,228,228,1) 5%, rgba(228,228,228,1) 100%);
+    border-bottom-color: var(--disc-blue);
+}
+
+.menu-option:hover {
+    transition: .25s;
+    background: rgb(202, 201, 201)
+}
+
+.menu-option.active:hover {
+    transition: .25s;
+    background: var(--disc-blue);
+    background: linear-gradient(90deg, var(--disc-blue) 0%, rgba(202,201,201,1) 5%, rgba(202,201,201,1) 100%);
     border-bottom-color: var(--disc-blue);
 }
 
