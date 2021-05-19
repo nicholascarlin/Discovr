@@ -2,3 +2,52 @@ main > div {
     margin: 0 auto;
     max-width: 600px;
 }
+
+.about-text-content {
+    font-size: 40px;
+    color:rgb(37, 37, 37);
+}
+
+#about-text-header {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.about-text-header-year {
+    font-weight: 1000;
+    font-size: 50px;
+    color: rgb(0,132,255);
+}
+
+.there-text-content {
+    color: #444344;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.ent-disc {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.p-info {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.p-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-abt-cont {
+    padding-top: 20px;
+}
+
+.abt-email {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
