@@ -1,3 +1,7 @@
+:root {
+    --disc-blue: rgb(0,132,255);
+}
+
 main > div {
     margin: 0 auto;
     max-width: 600px;
@@ -16,7 +20,7 @@ main > div {
 .about-text-header-year {
     font-weight: 1000;
     font-size: 50px;
-    color: rgb(0,132,255);
+    color: var(--disc-blue);
 }
 
 .there-text-content {
@@ -26,28 +30,39 @@ main > div {
 }
 
 .ent-disc {
-    padding-top: 20px;
+    padding-top: 35px;
     text-align: center;
     font-size: 30px;
 }
 
+.ent-disc-logo {
+    color: var(--disc-blue);
+    font-size: 40px;
+}
+
 .p-info {
     display: flex;
-    flex-direction: column;
-    padding-top: 20px;
+    flex-direction: row;
+    padding-top: 45px;
 }
 
 .p-info-content {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
 }
 
 .question-abt-cont {
     padding-top: 20px;
+    text-align: center;
 }
 
 .abt-email {
     text-decoration: underline;
     color: blue;
     cursor: pointer;
+}
+
+.about-signup {
+    padding-top: 70px;
 }
