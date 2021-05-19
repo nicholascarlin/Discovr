@@ -4,7 +4,8 @@
             <div class="menu-option" @click="selected = 1" :class="{active:selected == 1}">Home</div>
             <div class="menu-option" @click="selected = 2" :class="{active:selected == 2}">Discover</div>
             <div class="menu-option" @click="selected = 3" :class="{active:selected == 3}">My Groups</div>
-            <div class="menu-option" @click="selected = 4" :class="{active:selected == 4}">Notifications</div>
+            <div class="menu-option" @click="selected = 4" :class="{active:selected == 4}">Conversations</div>
+            <div class="menu-option" @click="selected = 5" :class="{active:selected == 5}">Notifications</div>
         </div>
     </div>
 </template>
@@ -29,6 +30,7 @@ export default {
     position: fixed;
     width: 250px;
     height: 100%;
+    background-color: rgb(228, 228, 228);
 }
 
 .menu-option {
@@ -39,12 +41,14 @@ export default {
     text-align: left;
     text-indent: 35px;
     cursor: pointer;
+    border-bottom: solid 1px;
 }
 
 .menu-option.active {
+    transition: 1s;
     background: var(--disc-blue);
-    background: linear-gradient(90deg, var(--disc-blue) 0%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%);
-    transition: ease 2s;
+    background: linear-gradient(90deg, var(--disc-blue) 0%, rgba(228,228,228,1) 5%, rgba(228,228,228,1) 100%);
+    border-bottom-color: var(--disc-blue);
 }
 
 </style>
