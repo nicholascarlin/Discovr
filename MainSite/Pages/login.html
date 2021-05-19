@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Carlton-Grenét</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/css/login.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	</head>
+
+<body>
+
+    <div id = "login">
+        <div id = "login-container">
+            <p id = "login-header"></p>
+            <p id = "carlton-grenet">Discovr</p>
+        <input type = "text" placeholder = "Username" id = "username" class = "login-field"><br>
+        <input type = "password" placeholder = "Password" id = "password" class = "login-field"><br>
+        <button id = "login-submit" onclick = "setTimeout(login, 2000)">Login</button>
+        <p id = "register"><a href= "/register">Not a member? Signup here!</a></p>
+    </div>
+    </div>
+</body>
+<script>
+    // document.getElementById("login-submit").onclick = "setTimeout(login,3000)"
+   let username = document.getElementById("username")
+   let password = document.getElementById("password")
+
+    function login(){
+        console.log("called")
+        data = {
+            "username": document.getElementById("username").value,
+            "password": document.getElementById("password").value,
+        }
+        console.log(data)
+        $.ajax({
+            url:'http://localhost:3000/submitlogin',
+            type:'POST',
+        async:false,
+            dataType: 'json',
+            data:data,
+            success: function(data) {
+                console.log(data);
+                location.href="/";
+            }, 
+            error: function(data){
+               console.log("error")
+                $("#login-submit").addClass('animated');
+                $("#username").addClass('animatedOne');
+                $("#password").addClass('animatedTwo');
+                     setTimeout(function() {
+                    $("#login-submit").removeClass('animated');
+                    password.value= ""
+                }, 3000);
+                
+                $("#login-submit").blur()
+                console.log(data)
+            }
+        });
+
+    }
+</script>
+</html>

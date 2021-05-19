@@ -1,0 +1,180 @@
+html{
+    height: 100%;
+}
+/* Start code generated using https://www.gradient-animator.com/ */
+body {
+    background:  #ebebee;
+}
+
+
+/* end code generated using https://www.gradient-animator.com/ */
+#login-header{
+    font-size:15px;
+    color:rgb(0, 0, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    text-decoration: underline;
+    padding-top:2%;
+}
+#carlton-grenet{
+    font-size:45px;
+    color:rgb(0, 132, 255);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    margin-top:5%;
+    margin-bottom: -5%;
+}
+#login{
+    width:100%;
+    text-align: center;
+}
+#login-container{
+    margin-top:10%;
+    width:40%;
+    height:450px;
+    text-align: center;
+    background-color:rgb(184, 173, 173);
+    opacity:70%;
+    margin-right:auto;
+    margin-left:auto; 
+    box-shadow: 0px 1px 15px 0px #000000;
+    /* border-color:black; */
+    border-radius:20px;
+   
+    background:  #f0f0f3;
+    box-shadow:
+    -10px -10px 30px #fff,
+    10px 10px 30px #3030364d,
+    inset -10px -10px 10px #8d8d9c63,
+    inset 10px 10px 10px #fff;
+
+}
+.login-field{
+    margin-top:10%;
+    text-align:center;
+    height:45px;
+    width:350px;
+    opacity:100%;
+    background-color:whitesmoke;
+    border-radius: 12px;
+    border-color:rgba(255, 255, 255, 0);
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+    
+}
+.login-field:focus{
+    outline: none;
+    caret-color: rgba(80, 79, 79, 0.959);
+    background-color:rgb(238, 238, 238);
+}
+.login-field:hover{
+    background-color:rgb(231, 230, 230);
+}
+
+
+
+
+
+#password{
+    margin-top: 20px;
+}
+
+#login-submit{
+    margin-top:8%;
+    width:260px;
+    height:45px;
+    background-color:whitesmoke;
+    border-radius: 12px;
+    border-color:rgba(255, 255, 255, 0);
+    font-weight: 300;
+    box-shadow: 6px 6px 6px #bec2c5, -6px -6px 6px white;
+    transition: width .7s ease, color .1s ease, background-color 1s;
+   
+}
+#login-submit:hover{
+    
+
+    background-color:rgba(44, 154, 197, 0.692);
+    box-shadow: 6px 8px 6px #cbced1, -6px -6px 6px white;
+    cursor:pointer;
+    
+}
+#login-submit:focus{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    outline:none;
+    color:rgba(255, 255, 255, 0);
+    box-shadow: none;
+    border-width:4px;
+    border-style:solid;
+    border-color:rgba(0, 128, 0, 0.137);
+    border-top: 3px solid rgb(121, 198, 221);
+	animation: spinner1 600ms linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes spinner1 {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#login-submit.animated{
+    transition: width .7s ease, color .1s ease, background-color 1s;
+    animation:error .5s linear;
+    animation-delay:500ms;
+    color:black;
+    border-radius:12px;
+    width:260px;
+    height:45px;
+}
+
+#username.animatedOne{
+   
+    transition:border .5s;
+    transition-delay: 1s;
+    border-color:rgba(255, 0, 0, 0.466);
+}
+
+#password.animatedTwo{
+   
+    transition:border .5s;
+    transition-delay: 1s;
+    border-color:rgba(255, 0, 0, 0.466);
+}
+
+
+
+@keyframes error {
+    0%     {border-color:rgb(255, 255, 255);}
+    50.0%  {border-color:#ff0000;}
+    75%     {border-color:#ff8f8f;}
+    100.0%  {border-color:rgb(255, 255, 255);}
+}
+
+@keyframes errorBox {
+    0%     {border-color:rgb(255, 255, 255);}
+    50.0%  {border-color:#ff0000;}
+    100%     {border-color:#ff8f8f;}
+}
+
+
+/* @keyframes spin {
+    from {
+        transform:rotate(0deg);
+        
+    }
+    to {
+        transform:rotate(360deg);
+}
+} */
+
+
+#register{
+    text-align: center;
+    margin-top:7%;
+    color:rgba(122, 122, 122, 0.322);
+    
+}
+
