@@ -12,7 +12,6 @@ export default {
 
 <style>
     .group-icon {
-        float: left;
         display: inline-block;
         text-align: center;
         width: 150px;
