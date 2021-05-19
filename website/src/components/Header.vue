@@ -14,6 +14,10 @@ export default {
 
 <style scoped>
 
+:root {
+    --disc-blue: rgb(0,132,255);
+}
+
 .header-al {
     text-align: center;
     width: 100px;
@@ -24,6 +28,10 @@ export default {
     cursor: pointer;
 }
 
+.header-al:hover {
+    background-color: rgb(78, 78, 78);
+}
+
 .header-logo-text {
     text-align: left;
     font-size: 40px;
@@ -31,6 +39,7 @@ export default {
 
 .header-search-bar {
     border-radius: 30px;
+    border: none;
     width: 30%;
     height: 30px;
     margin-top: 0px;
@@ -38,6 +47,8 @@ export default {
 }
 
 .header-search-bar:focus {
+    box-shadow: 0 0 3px var(--disc-blue);
+    transition: .25s;
     outline: none;
 }
 
