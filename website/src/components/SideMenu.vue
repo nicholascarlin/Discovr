@@ -25,6 +25,7 @@ export default {
 <style>
 :root {
     --disc-blue: rgb(0,132,255);
+    --disc-blue-hover: rgb(31, 147, 255);
 }
 
 .side-menu {

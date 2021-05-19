@@ -2,17 +2,18 @@
     <div class="home-page">
         <div>
             <div class="page-header">Home</div>
-            <BrowseGroups/>
-        </div>   
+            <BrowseRecommendedGroups/>
+        </div>
+        <div class="bottom-rec-group-line"></div>
     </div>
 </template>
 
 <script>
-import BrowseGroups from './BrowseGroups'
+import BrowseRecommendedGroups from './BrowseRecommendedGroups'
 
 export default {
     components: {
-       BrowseGroups
+       BrowseRecommendedGroups
     } 
 }
 </script>
@@ -21,6 +22,14 @@ export default {
 <style>
     .home-page {
         background-color: white;
+    }
+
+    .bottom-rec-group-line {
+        width: 67.5%;
+        height: 1px;
+        margin-top: 25px;
+        margin-left: 15px;
+        background-color: rgb(168, 168, 168);
     }
 
     .page-header {

@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header-logo-text">Discovr</div>
         <input class="header-search-bar" type="text" placeholder="Search for anything">
-        <div class="header-al">Add a Link</div>
+        <div class="header-log-in">Log in</div>
     </div>
 </template>
 
@@ -18,18 +18,19 @@ export default {
     --disc-blue: rgb(0,132,255);
 }
 
-.header-al {
+.header-log-in {
     text-align: center;
     width: 100px;
     background-color: var(--disc-blue);
     color: white;
     padding: 10px;
-    border-radius: 30px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.header-al:hover {
-    background-color: rgb(78, 78, 78);
+.header-log-in:hover {
+    transition: .5s;
+    background-color: rgb(3, 118, 226);
 }
 
 .header-logo-text {
