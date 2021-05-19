@@ -22,6 +22,7 @@ export default {
 <style>
     .home-page {
         background-color: white;
+        font-family: 'Playfair Display', serif;
     }
 
     .bottom-rec-group-line {

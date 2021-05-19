@@ -30,6 +30,7 @@ export default {
         border-radius: 20px;
         cursor: pointer;
         color: white;
+        font-family: 'Lato', sans-serif;
     }
 
     .group-icon:hover {

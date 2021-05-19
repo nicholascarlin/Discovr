@@ -29,6 +29,7 @@ export default {
 }
 
 .side-menu {
+    font-family: 'Lato', sans-serif;
     float: left;
     position: fixed;
     width: 250px;

@@ -56,6 +56,7 @@ export default {
 }
 
 .header {
+    font-family: 'Lato', sans-serif;
     display: flex;
     justify-content: space-between;
     padding: 10px;
