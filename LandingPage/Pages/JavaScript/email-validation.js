@@ -15,7 +15,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         
     })
+    document.getElementById('join-friend-button').addEventListener("click", function() {
+        submitFriend()
+    })
 });
+
 function submitSignup(email){
     data = {
         "email":email,
@@ -37,6 +41,22 @@ function submitSignup(email){
         error: function (data) {
             console.log(data)
             console.log("error")
+        }
+    })
+}
+
+function submitFriend(){
+    data = {
+        "email":document.getElementById("second-signup-input").value,
+    }
+    $.ajax({
+        url: '/addFriend',
+        type: 'POST',
+        async: false,
+        data:data,
+        dataType: 'json',
+        success: function (data) {
+        }, error: function (data) {
         }
     })
 }

@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     setInterval(function(){ 
         text.innerHTML = headerArray[textIndex];
-
+        text.style.zIndex = 0
         if(textIndex >= headerArray.length - 1) {
             textIndex = 0;
         } else {

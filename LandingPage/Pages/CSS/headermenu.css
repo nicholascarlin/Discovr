@@ -16,7 +16,6 @@ strong {
   font-weight: 600;
   letter-spacing: .03em;
   color: #212121;
-  z-index: 3;
 }
 
 header {
@@ -29,7 +28,6 @@ header {
   justify-content: center;
   align-items: center;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  z-index: 3;
 }
 
 .header-text {
@@ -41,7 +39,6 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
-  z-index: 3;
 }
 
 main p {
@@ -60,7 +57,6 @@ main small {
   height: 100vh;
   width: 100%;
   pointer-events: none;
-  z-index: 3;
 }
 #nav-container .bg {
   position: absolute;
@@ -100,7 +96,6 @@ main small {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 1;
   -webkit-appearance: none;
   border: 0;
   background: transparent;
