@@ -21,7 +21,7 @@ export default {
 .header-al {
     text-align: center;
     width: 100px;
-    background-color: rgb(58, 58, 58);
+    background-color: var(--disc-blue);
     color: white;
     padding: 10px;
     border-radius: 30px;
@@ -35,6 +35,7 @@ export default {
 .header-logo-text {
     text-align: left;
     font-size: 40px;
+    text-indent: 30px;
 }
 
 .header-search-bar {
@@ -56,6 +57,7 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    border-bottom: solid 1px;
 }
 
 .header * {
