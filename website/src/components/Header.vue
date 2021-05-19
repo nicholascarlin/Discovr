@@ -2,13 +2,13 @@
     <div class="header">
         <div class="header-logo-text">Discovr</div>
         <input class="header-search-bar" type="text" placeholder="Search for anything">
-        <div class="header-log-in">Log in</div>
+        <div class="header-log-in" v-on:click="$emit('loginTabChanged', 6)">Log in</div>
     </div>
 </template>
 
 <script>
 export default {
-    
+  
 }
 </script>
 

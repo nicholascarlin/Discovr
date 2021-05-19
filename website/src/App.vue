@@ -1,10 +1,9 @@
 <template>
   <div class="app">
-    <Header/>
+    <Header v-on:loginTabChanged="ltChange"/>
     <SideMenu v-on:tabChanged="onTabChange" />
       <div class="pages">
         <HomePage v-if="tabIndex==1"/>
-
       </div>
   </div>
 </template>
@@ -28,6 +27,10 @@ export default {
   },
   methods: {
     onTabChange(value) {
+      this.tabIndex = value;
+      console.log(value);
+    },
+    ltChange(value) {
       this.tabIndex = value;
       console.log(value);
     }
