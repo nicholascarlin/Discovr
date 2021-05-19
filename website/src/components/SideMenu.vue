@@ -1,11 +1,13 @@
 <template>
-    <div class="side-menu">
-        <div class="menu-options-wrapper">
-            <div class="menu-option" @click="selected = 1" :class="{active:selected == 1}">Home</div>
-            <div class="menu-option" @click="selected = 2" :class="{active:selected == 2}">Discover</div>
-            <div class="menu-option" @click="selected = 3" :class="{active:selected == 3}">My Groups</div>
-            <div class="menu-option" @click="selected = 4" :class="{active:selected == 4}">Conversations</div>
-            <div class="menu-option" @click="selected = 5" :class="{active:selected == 5}">Notifications</div>
+    <div>
+        <div class="side-menu">
+            <div class="menu-options-wrapper">
+                <div class="menu-option" v-on:click="$emit('tabChanged', 1)" @click="selected = 1" :class="{active:selected == 1}">Home</div>
+                <div class="menu-option" v-on:click="$emit('tabChanged', 2)" @click="selected = 2" :class="{active:selected == 2}">Discover</div>
+                <div class="menu-option" v-on:click="$emit('tabChanged', 3)" @click="selected = 3" :class="{active:selected == 3}">My Groups</div>
+                <div class="menu-option" v-on:click="$emit('tabChanged', 4)" @click="selected = 4" :class="{active:selected == 4}">Conversations</div>
+                <div class="menu-option" v-on:click="$emit('tabChanged', 5)" @click="selected = 5" :class="{active:selected == 5}">Notifications</div>
+            </div>
         </div>
     </div>
 </template>
