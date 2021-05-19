@@ -15,6 +15,7 @@ main > div {
 #about-text-header {
     padding-top: 30px;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .about-text-header-year {
@@ -25,7 +26,7 @@ main > div {
 
 .there-text-content {
     color: #444344;
-    padding-top: 15px;
+    padding-top: 20px;
     text-align: center;
 }
 
