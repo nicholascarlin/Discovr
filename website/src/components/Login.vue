@@ -9,9 +9,9 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input class="su-input-box" type="text" placeholder="Name" />
+                <input class="su-input-box" type="email" placeholder="Email" />
+                <input class="su-input-box" type="password" placeholder="Password" />
                 <button>Sign Up</button>
             </form>
         </div>
@@ -85,6 +85,13 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
 	margin: -20px 0 50px;
+}
+
+
+
+.su-input-box:focus {
+    outline-style: 3px outset;
+    outline-color: var(--disc-blue);
 }
 
 h1 {
