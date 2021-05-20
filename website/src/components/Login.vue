@@ -24,8 +24,8 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input class="su-input-box" type="email" placeholder="Email" />
+                <input class="su-input-box" type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
                 <button>Sign In</button>
             </form>
@@ -87,6 +87,11 @@ body {
 	margin: -20px 0 50px;
 }
 
+.container {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 75px;
+}
 
 
 .su-input-box:focus {
