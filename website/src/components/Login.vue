@@ -34,13 +34,13 @@
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
                     <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
+                    <p>To keep learning, please login with your account information.</p>
+                    <button class="ghost" id="signIn" v-on:Click="removeClass()">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <h1>Welcome!</h1>
+                    <p>Start discovering personalized, curated content today!</p>
+                    <button class="ghost" id="signUp" v-on:Click="addClass()">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -49,7 +49,17 @@
 
 <script>
 export default {
-    
+    methods: {
+        removeClass() {
+            const container = document.getElementById('container');
+            console.log(container);
+            container.classList.remove("right-panel-active");
+        },
+        addClass() {
+            const container = document.getElementById('container');
+            container.classList.add("right-panel-active");
+        }
+    }
 }
 </script>
 
