@@ -25,7 +25,10 @@ export default {
                 { groupName: "Banjo" },
                 { groupName: "Dobro" },
                 { groupName: "Bass" },
-                { groupName: "Drums" }
+                { groupName: "Drums" },
+                { groupName: "Guns" },
+                { groupName: "USA" },
+                { groupName: "Freedom" }
             ]
         };
     } 

@@ -1,46 +1,51 @@
 <template>
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input class="su-input-box" type="text" placeholder="Name" />
-                <input class="su-input-box" type="email" placeholder="Email" />
-                <input class="su-input-box" type="password" placeholder="Password" />
-                <button>Sign Up</button>
-            </form>
+    <div>
+        <div v-if="forgotPassword" class="forgot-password-container">
+            FUCKFUCK
         </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input class="su-input-box" type="email" placeholder="Email" />
-                <input class="su-input-box" type="password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep learning, please login with your account information.</p>
-                    <button class="ghost" id="signIn" v-on:Click="removeClass()">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Welcome!</h1>
-                    <p>Start discovering personalized, curated content today!</p>
-                    <button class="ghost" id="signUp" v-on:Click="addClass()">Sign Up</button>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your email for registration</span>
+                    <input class="su-input-box" type="text" placeholder="Name" />
+                    <input class="su-input-box" type="email" placeholder="Email" />
+                    <input class="su-input-box" type="password" placeholder="Password" />
+                    <button>Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>or use your account</span>
+                    <input class="su-input-box" type="email" placeholder="Email" />
+                    <input class="su-input-box" type="password" placeholder="Password" />
+                    <a class="fyp-link" @click="forgotPassword=true" href="#">Forgot your password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Welcome Back!</h1>
+                        <p>To keep learning, please login with your account information.</p>
+                        <button class="ghost" id="signIn" v-on:Click="removeClass()">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Welcome!</h1>
+                        <p>Start discovering personalized, curated content today!</p>
+                        <button class="ghost" id="signUp" v-on:Click="addClass()">Sign Up</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,6 +54,15 @@
 
 <script>
 export default {
+    data() {
+        return {
+            forgotPassword: false,
+            signInWaiting: false,
+            signInConfirmed: false,
+            signUpWaiting: false,
+            signUpConfirmed: false
+        }
+    },
     methods: {
         removeClass() {
             const container = document.getElementById('container');
@@ -74,6 +88,11 @@ export default {
 
 * {
 	box-sizing: border-box;
+}
+
+.fyp-link:hover {
+    text-decoration: underline;
+    color: blue;
 }
 
 body {
