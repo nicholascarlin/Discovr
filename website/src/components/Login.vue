@@ -65,6 +65,10 @@ export default {
 
 <style scoped>
 
+:root {
+    --disc-blue: rgb(0,132,255);
+    --disc-blue-hover: rgb(31, 147, 255);
+}
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
@@ -113,8 +117,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid var(--disc-blue);
+	background-color: var(--disc-blue);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -226,9 +230,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: var(--disc-blue);
+	background: -webkit-linear-gradient(to right, rgb(0, 162, 255), rgb(0, 89, 255));
+	background: linear-gradient(to right, rgb(0, 162, 255), rgb(0, 89, 255));
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
