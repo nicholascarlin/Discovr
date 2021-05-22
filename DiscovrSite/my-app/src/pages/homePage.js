@@ -8,7 +8,7 @@ const homePage = ({ match }) => {
       <div className="grid grid-cols-12 bg-gray-750 h-screen">
         <div className="col-span-2 h-full border-r-2  overflow-hidden">
           <p className="text-center pt-8">Discovr</p>
-          <p className="py-2 mt-16 text-center hover:bg-gray-200 border-l-4 hover:border-yellow-400 cursor-pointer">
+          <p className="py-2 mt-16 text-center hover:bg-gray-200 border-l-4 border-yellow-400 cursor-pointer">
             Home
           </p>
           <p className="py-2 mt-2 text-center hover:bg-gray-200 cursor-pointer hover:bg-gray-200 border-l-4 hover:border-yellow-400">
@@ -25,12 +25,12 @@ const homePage = ({ match }) => {
             Profile
           </p>
         </div>
-        <div className="col-start-3 col-end-9 overflow-scroll w-full">
+        <div className="col-start-3 col-end-10 overflow-scroll w-full">
           <div>
             <div className="col-span-8 text-center py-4 ">
               <input
                 type="text"
-                className="border-2 border-black rounded-xl w-3/4 outline-none text-center"
+                className="border-2 border-gray-300 rounded-lg w-3/4 outline-none text-center"
                 placeholder="search"
               ></input>
             </div>
@@ -50,7 +50,7 @@ const homePage = ({ match }) => {
             </div>
           </div>
         </div>
-        <div className="col-start-10 col-end-12"> Hello Three</div>
+        <div className="col-start-11 col-end-12"> Hello Three</div>
       </div>
     </div>
   );
