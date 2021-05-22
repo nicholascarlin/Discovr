@@ -7,8 +7,8 @@ const homePage = ({ match }) => {
     <div>
       <div className="grid grid-cols-12 bg-gray-750 h-screen">
         <div className="col-span-2 h-full border-r-2  overflow-hidden">
-          <p className="text-center pt-8">Discovr</p>
-          <p className="py-2 mt-16 text-center hover:bg-gray-200 border-l-4 border-yellow-400 cursor-pointer">
+          <p className="text-center pt-8 text-blue-600 text-4xl font-bold">Discovr</p>
+          <p className="py-2 mt-16 text-center hover:bg-gray-20 0 border-l-4 border-yellow-400 cursor-pointer">
             Home
           </p>
           <p className="py-2 mt-2 text-center hover:bg-gray-200 cursor-pointer hover:bg-gray-200 border-l-4 hover:border-yellow-400">
