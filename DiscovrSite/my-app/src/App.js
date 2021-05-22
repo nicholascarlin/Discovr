@@ -7,13 +7,14 @@ import {
 	Redirect,
 } from "react-router-dom";
 import homePage from "./pages/homePage.js"
+import loginPage from "./pages/loginPage"
 
 const App = () => {
 	return (
 		<Router>
 			<Switch>
 				<Route exact path="/" component={homePage} />
-        
+        <Route exact path="/login" component={loginPage} />
 				<Redirect to="/" /> {/* Path not matched */}
 			</Switch>
 		</Router>
