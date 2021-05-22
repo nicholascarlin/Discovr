@@ -59,9 +59,12 @@ main > div {
 }
 
 .abt-email {
-    text-decoration: underline;
     color: blue;
     cursor: pointer;
+}
+
+.abt-email:hover {
+    text-decoration: underline;
 }
 
 .about-signup {
