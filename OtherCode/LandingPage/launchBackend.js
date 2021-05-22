@@ -48,9 +48,11 @@ app.use((req, res, next) => {
 })
 console.log(__dirname)
 
-app.use("/", express.static(__dirname + "/public/Pages"));
+app.use("/", express.static(__dirname +"/public/Pages"));
 
-
+app.get("/about", function(request, response){
+  response.sendFile(path.join(__dirname+ '/public/Pages/about.html'));
+})
 
 
 
@@ -63,11 +65,13 @@ app.use("/", express.static(__dirname + "/public/Pages"));
 //   console.log('Example app listening on port 3000! Go to https://localhost:3000/')
 // })
 
-const key = fs.readFileSync('./key.pem');
-const cert = fs.readFileSync('./cert.pem');
+const key = fs.readFileSync('./private.key');
+const cert = fs.readFileSync('./certificate.crt');
+
 
 const server = https.createServer({key: key, cert: cert }, app);
 const httpServer = http.createServer(app)
+
 server.listen(443, () => { console.log('listening on 3001') });
 httpServer.listen(80)
 // var server = app.listen(process.env.PORT || 80, function () {
