@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
-import SideBar from "../components/homePage/sideBar";
-
+import SideBar from "../components/sideBar";
+import LoginForm from "../components/profilePage/loginForm";
+import jquery, { data } from "jquery"
 
 const homePage = ({ match }) => {
 return(
     <div className = "flex w-screen">
         <SideBar selected={"profile"}></SideBar>
-    <div className = "w-screen">
-        <p>Login</p>
-        <input className = "border-2 border-black rounded-xl outline-none"></input>
-        <br></br>
-        <input className = "border-2 border-black rounded-xl outline-none"></input>
-        <button>Submit</button>
-        </div>
-
+      <div className = "w-screen">
+      <LoginForm></LoginForm>
+    </div>
     </div>
 )
 

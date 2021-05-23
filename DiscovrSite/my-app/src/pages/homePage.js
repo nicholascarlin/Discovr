@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import ContentCard from "../components/homePage/contentCard";
-import SideBar from "../components/homePage/sideBar";
-import sideBar from "../components/homePage/sideBar";
+import SideBar from "../components/sideBar";
+
 const homePage = ({ match }) => {
   let sampleData = {
     groups: ["one", "two", "three", "four", 'five', 'six', 'seven', 'eight'],
@@ -18,11 +18,11 @@ const homePage = ({ match }) => {
          
       <div className="grid grid-cols-10 bg-gray-750 h-screen w-screen">
         
-        <div className="col-span-8 col-start-1 col-end-9 text-center mt-10 ">
+        <div className="col-span-8 col-start-1 col-end-9 text-center mt-10 pb-4 ">
           <input
             type="text"
-            className="mx-auto border-2 border-gray-300 rounded-lg w-3/4 outline-none text-center"
-            placeholder="search"
+            className="mx-auto border-2 border-gray-300 rounded-3xl font-serif w-3/4 outline-none text-center placeholder-black placeholder-opacity-60"
+            placeholder="Search For Anything"
           ></input>
          
         </div>
@@ -30,7 +30,7 @@ const homePage = ({ match }) => {
 
        
         <div className="col-start-1 col-end-9 col-span-8 w-full overflow-scroll">
-            <p className="text-xl text-center py-8">Browse</p>
+            <p className="text-xl text-left py-8 ml-44">Browse</p>
             <div className="w-3/4 border-black rounded-xl mx-auto text-center">
               <button className="border-black border-2 rounded-xl py-2 px-4 hover:bg-blue-200 mr-8">
                 Food
@@ -42,7 +42,7 @@ const homePage = ({ match }) => {
                 Drugs
               </button>
             </div>
-            <div className = "grid grid-cols-1 mt-8 overflow-scroll " >
+            <div className = "grid grid-cols-1 mt-8 overflow-scroll mx-auto" >
             {sampleData.groups.map((item) => {
               console.log("here");
               return <ContentCard groupName={item}></ContentCard>;
