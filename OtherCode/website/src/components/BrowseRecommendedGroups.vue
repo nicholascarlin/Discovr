@@ -26,9 +26,9 @@ export default {
                 { groupName: "Dobro" },
                 { groupName: "Bass" },
                 { groupName: "Drums" },
-                { groupName: "Guns" },
-                { groupName: "USA" },
-                { groupName: "Freedom" }
+                { groupName: "Mandolin" },
+                { groupName: "Violin" },
+                { groupName: "Steel Guitar" }
             ]
         };
     } 
