@@ -47,6 +47,7 @@ Remove the margin in all browsers.
 
 body {
   margin: 0;
+  background-color:rgba(244,244,244,255);
 }
 
 /**
@@ -175389,6 +175390,12 @@ video {
 
   .\32xl\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .contentCard {
+    -webkit-box-shadow: 2px 2px 19px 3px rgba(0,0,0,0.8); 
+box-shadow: 2px 2px 19px 3px rgba(0,0,0,0.8);
+    width:20%;
   }
 }
     
