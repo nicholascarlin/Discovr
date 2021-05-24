@@ -14,11 +14,12 @@
       <link rel="stylesheet" href="Style/footer.css">
 
       <script src="Scripts/moreDetails.js"></script>
+      <script src="Scripts/post.js"></script>
       
       <title>Discovr</title>
   </head>
 
-  <body>
+  <body id="body">
 
     <div class="header">
       <div class="header-text">Save to Discovr</div>
@@ -35,10 +36,10 @@
       </select>
 
       <div class="input-header">Title</div>
-      <input class="title-input input-box" placeholder="Example: 'The Wolf of Wall Street'" type="text">
+      <input class="title-input input-box" id="title-input" placeholder="Example: 'The Wolf of Wall Street'" type="text">
 
       <div class="input-header">Link</div>
-      <input class="link-input input-box" placeholder="www.joindiscovr.com" type="text">
+      <input class="link-input input-box" id="link-input" placeholder="www.joindiscovr.com" type="text">
 
       <div class="input-header">Add Tag(s)</div>
       <input class="tag-input input-box" type="text">
@@ -52,11 +53,11 @@
       <i class="fas fa-chevron-right md-clickable" id="md-chevron"></i>
 
       <div class="more-details-div">
-      
-
+        
       </div>
 
-      <div class="save-button">Save</div>
+      <div class="save-button" id="save-button">Save</div>
+      <div class="save-button-outline"></div>
 
       <div class="footer">
         <div class="discovr-logo">Discovr</div>
