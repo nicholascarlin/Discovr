@@ -25,7 +25,7 @@ const SideBar = ({selected})=> {
 
 return (
 
-<div className="text-center bg-gray-750 h-screen w-1/6 max-w-sm border-r-2 border-gray-200 border-opacity-10">
+<div className="text-center bg-gray-750 h-screen w-1/5 max-w-sm border-r-2 border-gray-200 border-opacity-10">
 
             <div className = "mt-8">
             <span className="text-center pt-8 text-blue-600 text-4xl font-bold">
