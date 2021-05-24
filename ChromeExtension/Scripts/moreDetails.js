@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     var mdClickable = document.getElementsByClassName("md-clickable");
     var chevron = document.getElementById("md-chevron");
+    var body = document.getElementById("body");
 
     console.log(mdClickable);
     console.log(chevron);
@@ -9,6 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         mdClickable[i].addEventListener("click", function() {
             console.log("clicked");
             chevron.classList.toggle("active");
+            body.classList.toggle("active");
         });
     }
 });

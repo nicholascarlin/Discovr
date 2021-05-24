@@ -1,0 +1,33 @@
+:root {
+    --disc-blue: #0084ff;
+}
+
+.footer { 
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    background-color: black;
+    width: 100%;
+}
+
+.discovr-logo {
+    position: absolute;
+    left: 20px;
+    bottom: 12.5px;
+    font-size: 20px;
+    color: var(--disc-blue);
+}
+
+.account-link {
+    position: absolute;
+    right: 15px;
+    bottom: 17.5px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.account-link:hover {
+    text-decoration: underline;
+}
