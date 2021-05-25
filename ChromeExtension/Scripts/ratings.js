@@ -30,8 +30,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function setStars(index) {
+
     for(i = index; i >= 1; i--) {
         star = document.getElementById(`star${i}`);
         star.style.background = "#2596be";
+    }
+
+    for(i = index + 1; i <= 5; i++) {
+        star = document.getElementById(`star${i}`);
+        star.style.background = "gold";
     }
 }
