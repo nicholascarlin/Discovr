@@ -2070,6 +2070,19 @@ video {
           appearance: none;
 }
 
+.bg-discovr {
+  --tw-bg-opacity: 1;
+  background-color:rgb(0, 132, 255);
+}
+
+.bg-discovr:hover {
+  --tw-bg-opacity: 1;
+  background-color:rgb(0, 132, 255);
+}
+
+
+
+
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -2345,6 +2358,12 @@ video {
   background-color: rgba(96, 165, 250, var(--tw-bg-opacity));
 }
 
+.bg-discovr-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0, 132, 255);
+}
+
+
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
@@ -2358,6 +2377,24 @@ video {
 .bg-blue-700 {
   --tw-bg-opacity: 1;
   background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+}
+
+
+.groupsButton{
+  --tw-bg-opacity: 1;
+  border-style:solid;
+  border-width:1px;
+  border-color:black;
+  margin-right:2em;
+  height:3em;
+  background-color:white;
+  border-radius:4em;
+  width:25%;
+}
+
+.groupsButton:hover{
+  --tw-bg-opacity: 1;
+  background-color:rgba(30, 84, 184, 0.315);
 }
 
 .bg-blue-800 {
@@ -2542,6 +2579,8 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
+
+
 
 .group:hover .group-hover\:bg-gray-100 {
   --tw-bg-opacity: 1;
