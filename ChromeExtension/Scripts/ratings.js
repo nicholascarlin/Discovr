@@ -33,11 +33,11 @@ function setStars(index) {
 
     for(i = index; i >= 1; i--) {
         star = document.getElementById(`star${i}`);
-        star.style.background = "#2596be";
+        star.style.background = "#0084ff";
     }
 
     for(i = index + 1; i <= 5; i++) {
         star = document.getElementById(`star${i}`);
-        star.style.background = "gold";
+        star.style.background = "#b9b9b9";
     }
 }
