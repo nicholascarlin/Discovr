@@ -23,7 +23,7 @@
 .more-details-toggle-text {
     font-size: 17px;
     color: rgb(185, 185, 185);
-    margin-top: 25px;
+    margin-top: 15px;
     text-indent: 12.5px;
     width: 150px;
     cursor: pointer;
@@ -34,7 +34,7 @@
     position: absolute;
     font-size: 17px;
     color: rgb(185, 185, 185);
-    top: 376px;
+    top: 366px;
     left: 127.5px;
     transition: .75s;
 }
