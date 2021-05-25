@@ -6,7 +6,7 @@
 .input-header {
     font-size: 14px;
     text-indent: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .input-box {
@@ -23,7 +23,7 @@
 .more-details-toggle-text {
     font-size: 17px;
     color: rgb(185, 185, 185);
-    margin-top: 20px;
+    margin-top: 25px;
     text-indent: 12.5px;
     width: 150px;
     cursor: pointer;
@@ -34,7 +34,7 @@
     position: absolute;
     font-size: 17px;
     color: rgb(185, 185, 185);
-    top: 397px;
+    top: 376px;
     left: 127.5px;
     transition: .75s;
 }

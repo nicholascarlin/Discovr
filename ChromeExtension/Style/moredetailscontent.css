@@ -1,0 +1,11 @@
+.more-details-div {
+    opacity: 0;
+    z-index: -1;
+    transition: 0s;
+}
+
+.more-details-div.active {
+    opacity: 100;
+    z-index: 1;
+    transition: .75s;
+}
