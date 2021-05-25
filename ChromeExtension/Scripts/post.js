@@ -8,5 +8,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             title : document.getElementById("title-input").value,
             link : document.getElementById("link-input").value
         };
+
+        resetValues();
+
     });
 });
+
+function resetValues() {
+    document.getElementById("title-input").value = "";
+    document.getElementById("link-input").value = "";
+}
