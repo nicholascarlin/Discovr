@@ -9,12 +9,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
             link : document.getElementById("link-input").value
         };
 
-        resetValues();
+        setPopUpActive();
 
     });
 });
 
-function resetValues() {
-    document.getElementById("title-input").value = "";
-    document.getElementById("link-input").value = "";
+function setPopUpActive() {
+    susPopup = document.getElementsByClassName("sus");
+
+    bg = document.getElementById("bg");
+    popup = document.getElementById("popup");
+
+    bg.classList.add("active");
+    popup.classList.add("active");
+
+    for(var i = 0; i < susPopup.length; i++) {
+        susPopup[i].classList.add("active");
+    }
 }

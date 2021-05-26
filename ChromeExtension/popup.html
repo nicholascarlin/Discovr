@@ -13,11 +13,13 @@
       <link rel="stylesheet" href="Style/toggleswitch.css">
       <link rel="stylesheet" href="Style/footer.css">
       <link rel="stylesheet" href="Style/moredetailscontent.css">
+      <link rel="stylesheet" href="Style/popup.css">
 
       <script src="Scripts/moreDetails.js"></script>
       <script src="Scripts/post.js"></script>
       <script src="Scripts/ratings.js"></script>
       <script src="Scripts/grabURLAndTitle.js"></script>
+      <script src="Scripts/okayPopupButton.js"></script>
       
       <title>Discovr</title>
   </head>
@@ -31,6 +33,15 @@
 
     <div class="body-content">
       <div class="input-header">Type</div>
+
+      <div class="bg" id="bg"></div>
+      <div class="popup" id="popup">
+        <div class="sus link-saved-succesfully-popup">
+          <div class="sus link-saved-header">Link Saved</div>
+          <i class="sus far fa-check-circle"></i>
+          <div class="sus popup-save-ok-button" id="popup-save-ok-button">Okay</div>
+        </div>
+      </div>
 
       <select name="type-dropdown" class="type-dropdown input-box">
         <option value="value1">Choose Type...</option>
