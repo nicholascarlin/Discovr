@@ -1,3 +1,7 @@
+:root {
+    --disc-blue: #0084ff;
+}
+
 .body-content {
     width: 100%;
     height: 100%;
@@ -18,6 +22,11 @@
     width: 80%;
     height: 25px;
     text-indent: 10px;
+}
+
+.input-box:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px var(--disc-blue);
 }
 
 .more-details-toggle-text {
@@ -59,4 +68,8 @@
     height: 20px;
     padding: 5px 20px 5px 20px;
     text-indent: -2.5px;
+}
+
+.save-button:hover {
+    background-color: rgb(211, 210, 210);
 }
