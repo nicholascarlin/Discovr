@@ -3,6 +3,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     okButton = document.getElementById("popup-save-ok-button");
 
     okButton.addEventListener("click", function() {
+
+        console.log("Clicked OK");
         
         closeSUSPopup();
 

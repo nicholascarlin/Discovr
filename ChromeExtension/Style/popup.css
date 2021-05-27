@@ -15,6 +15,16 @@
     opacity: 100;
 }
 
+.link-saved-succesfully-popup {
+    opacity: 0;
+    z-index: -1;
+}
+
+.link-saved-succesfully-popup.active {
+    opacity: 100;
+    z-index: 1;
+}
+
 .popup {
     z-index: -1;
     opacity: 0;
@@ -38,31 +48,74 @@
 
 .link-saved-header {
     position: absolute;
-    margin-left: 47.5px;
+    left: 0;
+    right: 0;
+    text-align: center;
     font-size: 18px;
     margin-top: 10px; 
+}
+
+.error-popup {
+    opacity: 0;
+    z-index: -1;
+}
+
+.error-popup.active {
+    opacity: 100;
+    z-index: 1;
+}
+
+.error-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.error-message {
+    font-size: 12px;
+    position: absolute;
+    top: 37.5px;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .fa-check-circle {
     position: absolute;
     font-size: 80px;
     color: var(--disc-blue);
-    margin-left: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
     margin-top: 50px;
 }
 
-.popup-save-ok-button {
+.fa-times-circle {
+    position: absolute;
+    font-size: 80px;
+    color: red;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.popup-save-ok-button, .error-ok-button {
     background-color: var(--disc-blue);
     height: 25px;
     width: 70px;
     position: absolute;
     bottom: 10px;
     text-align: center;
-    margin-left: 57.5px;
+    margin-left: 65px;
     padding-top: 10px;
     border-radius: 20px;
     color: white;
     cursor: pointer;
+    z-index: 40;
 }
 
 .popup-save-ok-button:hover {
