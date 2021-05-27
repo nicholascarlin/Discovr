@@ -10,11 +10,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         };
 
         isEmailValid = validateURL(document.getElementById("link-input").value);
+        isTitleValid = validateTitle(document.getElementById("title-input").value)
         
-        if(isEmailValid) {
+        if(isEmailValid && isTitleValid) {
             setPopUpActive();
+        } else if(!isTitleValid) {
+            document.getElementById("error-message").innerHTML = "Invalid Title"; 
+            setErrorPopupActive();               
         } else {
-            document.getElementById("error-message").innerHTML = "Invalid URL"
+            document.getElementById("error-message").innerHTML = "Invalid URL";
             setErrorPopupActive();
         }
     });
@@ -63,6 +67,11 @@ function validateURL(url) {
     }
 }
 
-function validateTitle() {
-
+function validateTitle(title) {
+    if(title != "") {
+        console.log("valid title");
+        return true;
+    }
+    console.log("Invalid title")
+    return false;
 }
