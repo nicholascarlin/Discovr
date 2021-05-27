@@ -25,9 +25,11 @@ function setPopUpActive() {
 
     bg = document.getElementById("bg");
     popup = document.getElementById("popup");
+    check = document.getElementById("succ-check");
 
     bg.classList.add("active");
     popup.classList.add("active");
+    check.classList.add("active")
 
     for(var i = 0; i < susPopup.length; i++) {
         susPopup[i].classList.add("active");
@@ -39,9 +41,11 @@ function setErrorPopupActive() {
 
     bg = document.getElementById("bg");
     popup = document.getElementById("popup");
+    x = document.getElementById("err-check");
 
     bg.classList.add("active");
     popup.classList.add("active");
+    x.classList.add("active");
 
     for(var i = 0; i < errPopup.length; i++) {
         errPopup[i].classList.add("active");
@@ -57,4 +61,8 @@ function validateURL(url) {
     } else {
         return false;
     }
+}
+
+function validateTitle() {
+
 }
