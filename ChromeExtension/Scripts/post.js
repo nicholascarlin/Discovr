@@ -9,12 +9,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
             link : document.getElementById("link-input").value
         };
 
-        isEmailValid = validateEmail(document.getElementById("link-input").value);
+        isEmailValid = validateURL(document.getElementById("link-input").value);
         
         if(isEmailValid) {
             setPopUpActive();
         } else {
-            console.log("Error Popup");
+            document.getElementById("error-message").innerHTML = "Invalid URL"
             setErrorPopupActive();
         }
     });
@@ -48,7 +48,7 @@ function setErrorPopupActive() {
     }
 }
 
-function validateEmail(url) {
+function validateURL(url) {
     var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
     var regex = new RegExp(expression);
 

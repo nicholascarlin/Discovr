@@ -4,11 +4,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     okButton.addEventListener("click", function() {
 
-        console.log("Clicked OK");
-        
         closeSUSPopup();
 
-        resetValues();
+        resetValues();        
+
+    });
+
+    okErrButton = document.getElementById("error-ok-button");
+
+    okErrButton.addEventListener("click", function() {
+
+        console.log("Err Ok Clicked");
+
+        closeERRPopup();       
 
     });
 });
@@ -18,6 +26,20 @@ function resetValues() {
     document.getElementById("link-input").value = "";
 
     clearStars();
+}
+
+function closeERRPopup() {
+    errPopup = document.getElementsByClassName("err-pop");
+
+    bg = document.getElementById("bg");
+    popup = document.getElementById("popup");
+
+    bg.classList.remove("active");
+    popup.classList.remove("active");
+
+    for(var i = 0; i < errPopup.length; i++) {
+        errPopup[i].classList.remove("active");
+    }
 }
 
 function closeSUSPopup() {
