@@ -69,3 +69,11 @@
 .save-button:hover {
     background-color: rgb(211, 210, 210);
 }
+
+.type-dropdown::placeholder {
+    color: black;
+}
+
+.type-dropdown::-webkit-calendar-picker-indicator {
+    opacity: 100;
+}

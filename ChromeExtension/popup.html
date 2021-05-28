@@ -32,7 +32,6 @@
     </div>
 
     <div class="body-content">
-      <div class="input-header">Type</div>
 
       <div class="bg" id="bg"></div>
       <div class="popup" id="popup">
@@ -49,11 +48,15 @@
         </div>
       </div>
 
-      <select name="type-dropdown" class="type-dropdown input-box">
-        <option value="value1">Choose Type...</option>
-        <option value="value2">value2</option>
-        <option value="value3">value3</option>
-      </select>
+      <div class="input-header">Type</div>
+      <input placeholder="Choose Type..." class="type-dropdown input-box" list="groups">
+      <datalist id="groups">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
 
       <div class="input-header">Title</div>
       <input class="title-input input-box" id="title-input" placeholder="Example: 'The Wolf of Wall Street'" type="text">
