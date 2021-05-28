@@ -34,10 +34,12 @@ function closeERRPopup() {
     bg = document.getElementById("bg");
     popup = document.getElementById("popup");
     x = document.getElementById("err-check");
+    header = document.getElementById("error-header");
 
     bg.classList.remove("active");
     popup.classList.remove("active");
     x.classList.remove("active");
+    header.classList.remove("active");
 
     for(var i = 0; i < errPopup.length; i++) {
         errPopup[i].classList.remove("active");
@@ -50,10 +52,12 @@ function closeSUSPopup() {
     bg = document.getElementById("bg");
     popup = document.getElementById("popup");
     check = document.getElementById("succ-check");
+    header = document.getElementById("link-saved-header");
 
     bg.classList.remove("active");
     popup.classList.remove("active");
     check.classList.remove("active");
+    header.classList.remove("active");
 
     for(var i = 0; i < susPopup.length; i++) {
         susPopup[i].classList.remove("active");

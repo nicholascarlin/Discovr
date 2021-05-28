@@ -30,10 +30,12 @@ function setPopUpActive() {
     bg = document.getElementById("bg");
     popup = document.getElementById("popup");
     check = document.getElementById("succ-check");
+    header = document.getElementById("link-saved-header");
 
     bg.classList.add("active");
     popup.classList.add("active");
     check.classList.add("active")
+    header.classList.add("active");
 
     for(var i = 0; i < susPopup.length; i++) {
         susPopup[i].classList.add("active");
@@ -46,10 +48,12 @@ function setErrorPopupActive() {
     bg = document.getElementById("bg");
     popup = document.getElementById("popup");
     x = document.getElementById("err-check");
+    header = document.getElementById("error-header");
 
     bg.classList.add("active");
     popup.classList.add("active");
     x.classList.add("active");
+    header.classList.add("active");
 
     for(var i = 0; i < errPopup.length; i++) {
         errPopup[i].classList.add("active");
