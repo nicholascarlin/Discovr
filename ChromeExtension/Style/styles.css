@@ -1,5 +1,7 @@
 :root {
     --main-background: #fefefe;
+    --disc-blue: #0084ff;
+    --input-background: rgb(241, 240, 240);
 }
 
 body {
