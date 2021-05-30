@@ -4,16 +4,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     input.addEventListener("keypress", function(e){
 
-        if(e.key === "Enter") {
+        if(e.key === "Enter" && document.getElementById("type-input").value != "") {
             var isInputEvent = (Object.prototype.toString.call(e).indexOf("InputEvent") > -1);
 
-        if(!isInputEvent)
-            console.log("Selected: " + e.target.value);
-            AddElement(e.target.value);
-        }
-        }
-    
-        , false);
+            if(!isInputEvent)
+                console.log("Selected: " + e.target.value);
+                AddElement(e.target.value);
+            }
+        }, false);
 });
 
 function AddElement(text) {
