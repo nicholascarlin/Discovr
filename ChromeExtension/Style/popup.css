@@ -33,7 +33,7 @@
 
 .bg.active {
     position: absolute;
-    margin-top: -130px;
+    margin-top: -115px;
     height: 100%;
     width: 100%;
     z-index: 2;

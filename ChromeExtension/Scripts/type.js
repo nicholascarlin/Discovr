@@ -2,14 +2,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     let input = document.getElementById("type-input");
 
-    input.addEventListener("input", function(e){
-    
-        var isInputEvent = (Object.prototype.toString.call(e).indexOf("InputEvent") > -1);
-        
+    input.addEventListener("keypress", function(e){
+
+        if(e.key === "Enter") {
+            var isInputEvent = (Object.prototype.toString.call(e).indexOf("InputEvent") > -1);
+
         if(!isInputEvent)
             console.log("Selected: " + e.target.value);
             AddElement(e.target.value);
-        }, false);
+        }
+        }
+    
+        , false);
 });
 
 function AddElement(text) {
