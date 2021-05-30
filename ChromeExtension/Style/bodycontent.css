@@ -77,3 +77,48 @@
 .type-dropdown::-webkit-calendar-picker-indicator {
     opacity: 100;
 }
+
+.selected-types {
+    position: absolute;
+    width: 230px;
+    height: 25px;
+    left: 45px;
+    top: 50px;
+    display: inline-block;
+}
+
+.type-menu {
+    display: inline-block;
+    margin-left: -37.5px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.type {
+    display: inline-block;
+    background-color: var(--input-background);
+    border-radius: 20px;
+    padding: 2.5px 10px;
+}
+
+.type:hover {
+    background-color: var(--disc-blue);
+}
+
+.close {
+    font-weight: bold;
+    display: inline-block;
+    transform: scale(1.4);
+    margin-left: 5px;
+    padding-bottom: 4px;
+    vertical-align: middle;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: red;
+}
