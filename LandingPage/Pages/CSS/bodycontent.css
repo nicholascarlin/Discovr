@@ -17,3 +17,24 @@ main > div {
     font-size: 30px;
     text-align: center;
 }
+
+@media only screen and (max-width: 1000px) {
+    .changing-content-header {
+        font-size: 8em;
+        margin: 0;
+        padding-top: 70px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    main > div {
+        margin: 0 auto;
+        max-width: 600px;
+       opacity: 100%;
+       
+    }
+    .content-subheader {
+        font-size: 2em;
+        text-align: center;
+    }
+  }

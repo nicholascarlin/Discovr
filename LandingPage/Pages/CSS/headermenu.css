@@ -31,7 +31,7 @@ header {
 }
 
 .header-text {
-    font-size: 30px;
+    font-size: 5vw;
     cursor: pointer;
 }
 
@@ -123,6 +123,7 @@ main small {
   pointer-events: auto;
   margin-left: 25px;
   touch-action: manipulation;
+  
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .icon-bar {
@@ -242,4 +243,19 @@ img {
   vertical-align: middle;
   height: auto;
   width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  #nav-container .bg {
+    position: absolute;
+    top: 1;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 70px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    background: #000;
+  }
 }

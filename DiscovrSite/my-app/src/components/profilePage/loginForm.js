@@ -1,9 +1,9 @@
 import React from "react";
 
-const LoginForm = ({}) => {
+const LoginForm = () => {
     let isLoggedIn = true;
+    
 
-  
   
     return isLoggedIn ? (
     <div id="login">
@@ -17,28 +17,9 @@ const LoginForm = ({}) => {
         <button className = "mt-12  w-1/4 rounded-lg duration-200 h-12 hover:bg-blue-400 hover:bg-opacity-20"
           id="login-submit"
           onClick={() => {
-            let data = {
-              username: document.getElementById("username").value,
-              password: document.getElementById("password").value,
-            };
-
-            fetch("http://localhost:8000/submitLogin", {
-              method: "POST", // or 'PUT'
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            })
-              .then((res) => res.json())
-              .then(
-                (response) => {
-                  console.log(response);
-                  window.location.href("/");
-                },
-                (error) => {
-                  console.log(error);
-                }
-              );
+            
+          
+            
           }}
         >
           Login
