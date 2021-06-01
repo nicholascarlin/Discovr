@@ -35,6 +35,12 @@ header {
     cursor: pointer;
 }
 
+@media screen and (min-width: 1000px) {
+  .header-text {
+    font-size: 45px;
+  }
+}
+
 .main-redirect {
   height: 70px;
   width: 100px;
