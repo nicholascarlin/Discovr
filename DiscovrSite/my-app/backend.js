@@ -13,12 +13,21 @@ var ObjectId = require('mongodb').ObjectID;
 const fs = require('fs');
 var url = "mongodb+srv://igranet:CSE330s@cluster0.gcbju.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
+const { auth } = require('express-openid-connect');
 
-app.use(session({
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true
-}));
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: 'asdfwefqer43qf',
+  baseURL: 'http://localhost:8000',
+  clientID: 'qxGlHDNaNC7XZ09PKu2hHcf1t7XEJZpk',
+  issuerBaseURL: 'https://dev-s3ta1m8l.us.auth0.com'
+};
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
+
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -153,9 +162,6 @@ app.post('/submitlogin', function (request, res) {
 })
 app.use("/", express.static(__dirname+"/Pages"));
 
-app.get('/login', function (req, res) {
-  res.sendFile(path.join(__dirname + '/login.html'));
-})
 
 app.get('/logout', function (req, res) {
   req.session.destroy()

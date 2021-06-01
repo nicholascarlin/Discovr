@@ -3,10 +3,25 @@ import { useHistory } from "react-router-dom";
 import ContentCard from "../components/homePage/contentCard";
 import SideBar from "../components/sideBar";
 import LoginButton from "../components/LoginButton"
-const homePage = ({ match }) => {
+import PostLogin from "./postLogin";
+
+const HomePage = ({ match }) => {
   let sampleData = {
     groups: ["one", "two", "three", "four", 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
   };
+
+    const {
+      data: Userdata,
+      error: userError
+    } = PostLogin("jo", "j");
+  
+    console.log("here two")
+  
+    console.log("UserDATA IS "+Userdata)
+
+
+
+
   return (
       <div>
     <div className = "flex">
@@ -33,18 +48,17 @@ const homePage = ({ match }) => {
             <p className="text-xl text-left py-8 ml-8 font-sans text-4xl">Browse</p>
             <div className="w-3/4 border-black pb-8 ml-8 font-sans text-left border-b-2 border-gray-400">
               <button className="groupsButton hover:groupsButton">
-                Food
+                Food 
               </button>
               <button className="groupsButton hover:groupsButton">
                 Music
               </button>
               <button className="groupsButton hover:groupsButton">
-                Drugs
+                Drugs 
               </button>
             </div>
             <div className = "grid gap-y-0 grid-cols-3  mt-8 overflow-scroll mx-auto" >
             {sampleData.groups.map((item) => {
-              console.log("here");
               return <ContentCard groupName={item}></ContentCard>;
             })}
             </div>
@@ -58,4 +72,4 @@ const homePage = ({ match }) => {
   );
 };
 
-export default homePage;
+export default HomePage;
