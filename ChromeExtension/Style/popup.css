@@ -1,0 +1,135 @@
+.popup.active {
+    position: absolute;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    margin-left: 50px;
+    margin-top: 50px;
+    z-index: 3;
+    transition: .5s;
+    opacity: 100;
+}
+
+.link-saved-succesfully-popup {
+    opacity: 0;
+    z-index: -1;
+}
+
+.link-saved-succesfully-popup.active {
+    opacity: 100;
+    z-index: 1;
+}
+
+.popup {
+    z-index: -1;
+    opacity: 0;
+}
+
+.bg {
+    z-index: -1;
+    opacity: 0;
+}
+
+.bg.active {
+    position: absolute;
+    margin-top: -115px;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.527);
+    opacity: 100;
+    transition: .5s;
+}
+
+.link-saved-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -300px; 
+}
+
+.link-saved-header.active {
+    margin-top: 10px;
+}
+
+.error-popup {
+    opacity: 0;
+    z-index: -3;
+}
+
+.error-popup.active {
+    opacity: 100;
+    z-index: 1;
+}
+
+.error-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    margin-top: -300px;
+}
+
+.error-header.active {
+    margin-top: 10px;
+}
+
+.error-message {
+    font-size: 12px;
+    position: absolute;
+    top: 37.5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.fa-check {
+    position: absolute;
+    font-size: 80px;
+    color: var(--disc-blue);
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -500px;
+}
+
+.fa-check.active {
+    margin-top: 50px;
+}
+
+.fa-times {
+    position: absolute;
+    font-size: 80px;
+    color: red;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: -600px;
+}
+
+.fa-times.active {
+    margin-top: 60px;
+}
+
+.popup-save-ok-button, .error-ok-button {
+    background-color: var(--disc-blue);
+    height: 25px;
+    width: 70px;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    margin-left: 65px;
+    padding-top: 10px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    z-index: 40;
+}
+
+.popup-save-ok-button:hover {
+    background-color: #0479e6;
+}

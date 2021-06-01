@@ -12,9 +12,15 @@
       <link rel="stylesheet" href="Style/header.css">
       <link rel="stylesheet" href="Style/toggleswitch.css">
       <link rel="stylesheet" href="Style/footer.css">
+      <link rel="stylesheet" href="Style/moredetailscontent.css">
+      <link rel="stylesheet" href="Style/popup.css">
 
       <script src="Scripts/moreDetails.js"></script>
       <script src="Scripts/post.js"></script>
+      <script src="Scripts/ratings.js"></script>
+      <script src="Scripts/grabURLAndTitle.js"></script>
+      <script src="Scripts/okayPopupButton.js"></script>
+      <script src="Scripts/type.js"></script>
       
       <title>Discovr</title>
   </head>
@@ -27,13 +33,36 @@
     </div>
 
     <div class="body-content">
-      <div class="input-header">Type</div>
 
-      <select name="type-dropdown" class="type-dropdown input-box">
-        <option value="value1">Choose Type...</option>
-        <option value="value2">value2</option>
-        <option value="value3">value3</option>
-      </select>
+      <div class="bg" id="bg"></div>
+      <div class="popup" id="popup">
+        <div class="sus link-saved-succesfully-popup" id="lssp">
+          <div class="sus link-saved-header" id="link-saved-header">Link Saved</div>
+          <i class="sus fas fa-check" id="succ-check"></i>
+          <div class="sus err-pop popup-save-ok-button" id="popup-save-ok-button">Okay</div>
+        </div>
+        <div class="err-pop error-popup" id="errp">
+          <div class="err-pop error-header" id="error-header">Error</div>
+          <div class="err-pop error-message" id="error-message">Error Message Here</div>
+          <i class="err-pop fas fa-times" id="err-check"></i>
+          <div class="err-pop error-ok-button" id="error-ok-button">Okay</div>
+        </div>
+      </div>
+
+      <div class="input-header">Type</div>
+      <div class="selected-types">
+        <ul class="type-menu" id="type-menu">
+          <li class="type">HTML<span class="close">x</span></li>
+        </ul>
+      </div>
+      <input placeholder="Choose Type..." class="type-dropdown input-box" list="groups" id="type-input">
+      <datalist id="groups">
+        <option value="Cars">
+        <option value="Trees">
+        <option value="Underwater Basket Weaving">
+        <option value="Space">
+        <option value="Time">          
+      </datalist>
 
       <div class="input-header">Title</div>
       <input class="title-input input-box" id="title-input" placeholder="Example: 'The Wolf of Wall Street'" type="text">
@@ -53,7 +82,19 @@
       <i class="fas fa-chevron-right md-clickable" id="md-chevron"></i>
 
       <div class="more-details-div">
-        
+        <div class="input-header">Notes</div>
+        <input class="input-box note-input" type="text"/>
+
+        <div class="rating-wrapper">
+          <div class="input-header rating-text">Rating: </div>
+          <div class="stars-wrapper" id="stars-wrapper">
+            <div class="clip-star" id="star1"></div>
+            <div class="clip-star" id="star2"></div>
+            <div class="clip-star" id="star3"></div>
+            <div class="clip-star" id="star4"></div>
+            <div class="clip-star" id="star5"></div>
+          </div>
+      </div>
       </div>
 
       <div class="save-button" id="save-button">Save</div>
@@ -61,7 +102,7 @@
 
       <div class="footer">
         <div class="discovr-logo">Discovr</div>
-        <a href="" class="account-link">My Account</a>
+        <a href="https://www.joindiscovr.com" target="_blank" class="account-link">My Account</a>
       </div>
 
     </div>

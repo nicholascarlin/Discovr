@@ -1,7 +1,3 @@
-:root {
-    --disc-blue: #0084ff;
-}
-
 input[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -49,7 +45,7 @@ label:active:after {
 .toggle-tag {
     position: absolute;
     font-size: 10px;
-    top: 355.5px;
+    top: 331.5px;
 }
 
 .public-toggle-tag {

@@ -6,24 +6,29 @@
 .input-header {
     font-size: 14px;
     text-indent: 10px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .input-box {
     border-radius: 20px;
     margin-top: 7.5px;
     margin-left: 30px;
-    background-color: rgb(241, 240, 240);
+    background-color: var(--input-background);
     border: none;
     width: 80%;
     height: 25px;
     text-indent: 10px;
 }
 
+.input-box:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px var(--disc-blue);
+}
+
 .more-details-toggle-text {
     font-size: 17px;
     color: rgb(185, 185, 185);
-    margin-top: 20px;
+    margin-top: 15px;
     text-indent: 12.5px;
     width: 150px;
     cursor: pointer;
@@ -34,7 +39,7 @@
     position: absolute;
     font-size: 17px;
     color: rgb(185, 185, 185);
-    top: 397px;
+    top: 366px;
     left: 127.5px;
     transition: .75s;
 }
@@ -59,4 +64,61 @@
     height: 20px;
     padding: 5px 20px 5px 20px;
     text-indent: -2.5px;
+}
+
+.save-button:hover {
+    background-color: rgb(211, 210, 210);
+}
+
+.type-dropdown::placeholder {
+    color: black;
+}
+
+.type-dropdown::-webkit-calendar-picker-indicator {
+    opacity: 100;
+}
+
+.selected-types {
+    position: absolute;
+    width: 230px;
+    height: 25px;
+    left: 45px;
+    top: 50px;
+    display: inline-block;
+}
+
+.type-menu {
+    display: inline-block;
+    margin-left: -37.5px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.type {
+    display: inline-block;
+    background-color: var(--input-background);
+    border-radius: 20px;
+    padding: 2.5px 10px;
+}
+
+.type:hover {
+    background-color: var(--disc-blue);
+}
+
+.close {
+    font-weight: bold;
+    display: inline-block;
+    transform: scale(1.4);
+    margin-left: 5px;
+    padding-bottom: 4px;
+    vertical-align: middle;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: red;
 }
