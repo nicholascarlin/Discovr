@@ -7,13 +7,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         if(e.key === "Enter" && document.getElementById("type-input").value != "") {
             var isInputEvent = (Object.prototype.toString.call(e).indexOf("InputEvent") > -1);
 
-            if(!isInputEvent)
-                console.log("Selected: " + e.target.value);
-                AddElement(e.target.value);
-                UpdateCloseEventListeners();
-                e.target.value = "";
+            if(CheckDuplicates(e.target.value)) {
+                if(!isInputEvent) {
+                    AddElement(e.target.value);
+                    UpdateCloseEventListeners();
+                    e.target.value = "";
+                }
             }
-        }, false);
+        }
+    }, false);
 });
 
 function AddElement(text) {
@@ -32,16 +34,39 @@ function AddElement(text) {
     menu.appendChild(entry);
 }
 
+function RemoveDatalistOption(text) {
+
+}
+
+function CheckDuplicates(text) {
+
+    let types = document.getElementsByClassName("type");
+
+    for(let i = 0; i < types.length; i++) {
+        
+        var spanPattern = '<span class="close">x</span>';
+        var str = (types[i].innerHTML.toString());
+
+        var truncateAfter = function(str, spanPattern) {
+            return str.slice(0, str.indexOf(spanPattern));
+        };
+
+        var addedText = (truncateAfter(str, spanPattern));
+
+        if(addedText.toUpperCase() === text.toUpperCase()) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 function UpdateCloseEventListeners() {
-    console.log("Update close");
 
     let closeButtons = document.getElementsByClassName("close");
 
-    console.log(closeButtons);
-
     for(let i = 0; i < closeButtons.length; i++) {
         closeButtons[i].addEventListener("click", function(e) {
-            console.log("Clicked: " + i);
             e.currentTarget.parentNode.remove();
         });
     }
