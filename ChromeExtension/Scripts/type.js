@@ -10,6 +10,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             if(!isInputEvent)
                 console.log("Selected: " + e.target.value);
                 AddElement(e.target.value);
+                UpdateCloseEventListeners();
+                e.target.value = "";
             }
         }, false);
 });
@@ -28,4 +30,19 @@ function AddElement(text) {
     entry.classList.add("type");
 
     menu.appendChild(entry);
+}
+
+function UpdateCloseEventListeners() {
+    console.log("Update close");
+
+    let closeButtons = document.getElementsByClassName("close");
+
+    console.log(closeButtons);
+
+    for(let i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener("click", function(e) {
+            console.log("Clicked: " + i);
+            e.currentTarget.parentNode.remove();
+        });
+    }
 }
