@@ -53,7 +53,13 @@ app.use("/", express.static(__dirname +"/public/Pages"));
 app.get("/about", function(request, response){
   response.sendFile(path.join(__dirname+ '/public/Pages/about.html'));
 })
-
+app.use(function(req, res, next) {
+  if((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {
+      res.redirect('https://' + req.get('Host') + req.url);
+  }
+  else
+      next();
+});
 
 
 
@@ -70,10 +76,9 @@ const cert = fs.readFileSync('./certificate.crt');
 
 
 const server = https.createServer({key: key, cert: cert }, app);
-const httpServer = http.createServer(app)
+// const httpServer = http.createServer(app)
 
 server.listen(443, () => { console.log('listening on 3001') });
-httpServer.listen(80)
 // var server = app.listen(process.env.PORT || 80, function () {
 //   var port = server.address().port;
 //   console.log("App now running on port", port);

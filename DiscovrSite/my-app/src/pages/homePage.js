@@ -4,12 +4,14 @@ import ContentCard from "../components/homePage/contentCard";
 import SideBar from "../components/sideBar";
 import LoginButton from "../components/LoginButton"
 import PostLogin from "./postLogin";
-
+import testBackend from "./testBackend"
 const HomePage = ({ match }) => {
   let sampleData = {
     groups: ["one", "two", "three", "four", 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
   };
 
+  testBackend()
+  
     const {
       data: Userdata,
       error: userError
@@ -33,7 +35,7 @@ const HomePage = ({ match }) => {
          
       <div className="grid grid-cols-10 bg-gray-750 h-screen w-screen">
         
-        <div className="col-span-8 col-start-1 col-end-9 text-center mt-10 pb-10">
+        <div className="col-span-8 col-start-1 col-end-9 text-center pt-5 pb-10 bg-black">
           <input
             type="text"
             className="mx-auto h-10 rounded-3xl font-serif w-3/4 outline-none text-center placeholder-black placeholder-opacity-60"

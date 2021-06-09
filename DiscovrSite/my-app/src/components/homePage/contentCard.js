@@ -1,11 +1,15 @@
 import React from "react";
 import sampleImage from "./sampleimage.jpeg";
 
+
 const ContentCard = ({ groupName }) => {
   let ranNum = Math.random()
   let height= ""
   let marginBottom = ""
   let gap = ""
+
+
+
   if(ranNum >= 0 && ranNum <= .4){
       height = "80"
       marginBottom = " mb-2"
