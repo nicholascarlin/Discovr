@@ -6,7 +6,7 @@ import {
 	Route,
 	Redirect,
 } from "react-router-dom";
-import homePage from "./pages/HomePage.js"
+import homePage from "./pages/homePage.js"
 import loginPage from "./pages/loginPage"
 
 const App = () => {
